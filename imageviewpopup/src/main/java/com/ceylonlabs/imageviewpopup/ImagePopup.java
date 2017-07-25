@@ -171,7 +171,14 @@ public class ImagePopup extends ImageView {
     }
 
     public void setLayoutOnTouchListener(OnTouchListener onTouchListener){
+        //Allows for setting the OnTouchListener - using the default method doesn't work
         layout.setOnTouchListener(onTouchListener);
+    }
+    
+    @Override
+    public void setImageBitmap(Bitmap bitmap){
+        //Allows for changing the Popup image. Using the default method doesn't work.
+        imageView.setImageBitmap(bitmap);
     }
 
 }
